@@ -13,13 +13,15 @@ class Clientes(models.Model):
     ciudad = models.CharField(max_length=40, verbose_name="Ciudad")
     departamento = models.CharField(max_length=40, verbose_name="Departamento")
     pais = models.CharField(max_length=40, verbose_name="País")
+    est = (('A', 'Activo'),('I', 'Inactivo'))
+    estado = models.CharField(max_length=1, choices=est, verbose_name="Estado", null=True, blank=True)
     fecha_crea = models.DateTimeField(auto_now_add=True, verbose_name="Fecha de Creación")
     fecha_actualiza = models.DateTimeField(auto_now=True, verbose_name="Fecha de Actualización")
 
     class Meta:
-        verbose_name = "Gestión de Cliente"
-        verbose_name_plural = "Gestión de Clientes"
-        ordering = ['-fecha_crea']
+        verbose_name = "Cliente"
+        verbose_name_plural = "Clientes"
+        ordering = ['nombre_completo']
 
     def __str__(self):
         return self.nombre_completo
