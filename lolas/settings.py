@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'x59g$edit_(s9&(px##mas_i2391jhofx-ojg%$345*lco4giy'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['lolas.pythonanywhere.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
